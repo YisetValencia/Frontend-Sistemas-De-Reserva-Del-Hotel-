@@ -15,6 +15,14 @@ import { UsuarioService } from '../../core/services/usuario.service';
 import { UsuarioRead } from '../../models/api.models';
 
 
+import { AuditContextService } from '../../../../../../PRUEBA-1/web/src/app/core/audit-context.service';
+import { UsuarioService } from '../../../../../../PRUEBA-1/web/src/app/core/services/usuario.service';
+import { UsuarioRead } from '../../../../../../PRUEBA-1/web/src/app/models/api.models';
+
+/**
+ * Login de demostración: solo comprueba que el nombre de usuario exista en el API.
+ * La contraseña no se valida contra el backend (hasta que exista autenticación real).
+ */
 @Component({
   selector: 'app-login',
   imports: [

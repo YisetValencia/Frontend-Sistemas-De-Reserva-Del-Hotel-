@@ -3,6 +3,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // Tema Material — Azul Cobalto + Cyan (en sintonía con main-layout)
 // ─────────────────────────────────────────────────────────────────────────────
+
 html {
   @include mat.theme((
     color: (
@@ -25,6 +26,12 @@ html {
 // ─────────────────────────────────────────────────────────────────────────────
 :root {
   // Paleta azul
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+
+:root {
+  
   --blue-900:  #0a1f44;
   --blue-800:  #0d2b5e;
   --blue-700:  #1040a0;
@@ -37,6 +44,7 @@ html {
   --blue-50:   #eff6ff;
 
   // Neutros fríos
+  
   --white:     #ffffff;
   --snow:      #f8faff;
   --mist:      #f0f4fb;
@@ -48,6 +56,7 @@ html {
   --slate-900: #0f172a;
 
   // Semánticos
+  
   --color-primary:        var(--blue-600);
   --color-primary-dark:   var(--blue-800);
   --color-primary-light:  var(--blue-400);
@@ -62,6 +71,7 @@ html {
   --color-border-strong:  var(--slate-300);
 
   // Layout
+
   --nav-expanded:  268px;
   --nav-collapsed: 72px;
   --nav-ease:      cubic-bezier(0.4, 0, 0.2, 1);
@@ -76,6 +86,7 @@ html {
   --shadow-nav:    6px 0 40px rgba(26, 85, 204, 0.10);
 
   // Tipografía
+
   --font-display: 'Sora', 'Segoe UI', sans-serif;
   --font-body:    'DM Sans', 'Helvetica Neue', sans-serif;
 }
@@ -83,6 +94,7 @@ html {
 // ─────────────────────────────────────────────────────────────────────────────
 // Base
 // ─────────────────────────────────────────────────────────────────────────────
+
 html,
 body {
   height: 100%;
@@ -105,6 +117,7 @@ body {
 // ─────────────────────────────────────────────────────────────────────────────
 // Tarjetas
 // ─────────────────────────────────────────────────────────────────────────────
+
 .mat-mdc-card {
   border-radius: 16px !important;
   border: 1px solid #e2e8f5 !important;   // --fog del layout
@@ -142,6 +155,7 @@ body {
 // ─────────────────────────────────────────────────────────────────────────────
 // Botones — raised (primarios)
 // ─────────────────────────────────────────────────────────────────────────────
+
 .mat-mdc-raised-button {
   border-radius: 10px !important;
   padding: 10px 22px !important;
@@ -180,6 +194,15 @@ body {
 }
 
 // Botones text / icon
+  border-color: #cbd5e1 !important;   
+  transition: background-color 0.18s ease, border-color 0.18s ease !important;
+
+  &:hover {
+    background-color: #eff6ff !important;  
+    border-color: #93c5fd !important;      
+  }
+}
+
 .mat-mdc-icon-button,
 .mat-mdc-button {
   border-radius: 8px !important;
@@ -200,6 +223,7 @@ body {
 // ─────────────────────────────────────────────────────────────────────────────
 // Tablas
 // ─────────────────────────────────────────────────────────────────────────────
+
 .mat-mdc-table {
   background: #ffffff !important;
   border-radius: 14px !important;
@@ -209,6 +233,7 @@ body {
 
   .mat-mdc-header-row {
     background: #eff6ff !important;   // --blue-50
+    background: #eff6ff !important;   
 
     .mat-mdc-header-cell {
       font-family: 'DM Sans', sans-serif !important;
@@ -218,6 +243,8 @@ body {
       text-transform: uppercase !important;
       color: #1a55cc !important;     // --blue-600
       border-bottom: 2px solid #bfdbfe !important;  // --blue-200
+      color: #1a55cc !important;     
+      border-bottom: 2px solid #bfdbfe !important;  
     }
   }
 
@@ -240,6 +267,7 @@ body {
 // ─────────────────────────────────────────────────────────────────────────────
 // Diálogos
 // ─────────────────────────────────────────────────────────────────────────────
+
 .mat-mdc-dialog-container .mdc-dialog__surface {
   border-radius: 18px !important;
   border: 1px solid #e2e8f5;
@@ -254,6 +282,7 @@ body {
   font-size: 1.1rem !important;
   letter-spacing: -0.02em !important;
   color: #0d2b5e !important;   // --blue-800
+  color: #0d2b5e !important;   
 }
 
 .dialog-body {
@@ -273,6 +302,7 @@ body {
 // ─────────────────────────────────────────────────────────────────────────────
 // Menús desplegables / Select panels
 // ─────────────────────────────────────────────────────────────────────────────
+
 .mat-mdc-select-panel,
 .mat-mdc-menu-panel {
   border-radius: 12px !important;
@@ -294,6 +324,7 @@ body {
 // ─────────────────────────────────────────────────────────────────────────────
 // Snackbars / Toasts
 // ─────────────────────────────────────────────────────────────────────────────
+
 .mat-mdc-snack-bar-container .mdc-snackbar__surface {
   border-radius: 12px !important;
   background: #0d2b5e !important;   // --blue-800
@@ -306,6 +337,7 @@ body {
 // ─────────────────────────────────────────────────────────────────────────────
 
 // El mat-toolbar ignora background desde component styles — se fuerza aquí
+
 .top-bar.mat-toolbar,
 mat-toolbar.top-bar {
   background: #ffffff !important;
@@ -319,6 +351,7 @@ mat-toolbar.top-bar {
 // ─────────────────────────────────────────────────────────────────────────────
 // Mat Sidenav Container — resetear fondo y bordes que Material pone por defecto
 // ─────────────────────────────────────────────────────────────────────────────
+
 .mat-drawer-container {
   background: #0d2b5e !important;
   padding-top: 0 !important;
@@ -342,6 +375,9 @@ mat-toolbar.top-bar {
 // ─────────────────────────────────────────────────────────────────────────────
 // Tooltips
 // ─────────────────────────────────────────────────────────────────────────────
+}
+
+
 .mat-mdc-tooltip .mdc-tooltip__surface {
   border-radius: 8px !important;
   background: #0a1f44 !important;   // --blue-900
@@ -353,6 +389,7 @@ mat-toolbar.top-bar {
 // ─────────────────────────────────────────────────────────────────────────────
 // Scrollbar global (igual que main-layout)
 // ─────────────────────────────────────────────────────────────────────────────
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -374,6 +411,18 @@ mat-toolbar.top-bar {
 // ─────────────────────────────────────────────────────────────────────────────
 // View Transitions (page navigation)
 // ─────────────────────────────────────────────────────────────────────────────
+  background: #f0f4fb;  
+}
+
+::-webkit-scrollbar-thumb {
+  background: #93c5fd;   
+  border-radius: 999px;
+
+  &:hover {
+    background: #3b82f6;  
+  }
+}
+
 @supports (view-transition-name: none) {
   ::view-transition-old(root),
   ::view-transition-new(root) {
