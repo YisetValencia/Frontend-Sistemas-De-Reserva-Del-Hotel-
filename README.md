@@ -3,7 +3,7 @@ Desarrollo del Frontend de Sistema de Reservas de Hotel en python
 
 ---
 
-## Ejecución del Frontend
+## Ejecución del Frontend.
 
 Sigue estos pasos para ejecutar correctamente el proyecto en tu entorno local:
 
